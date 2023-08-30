@@ -3,11 +3,11 @@ import Pet from "./Pet";
 
 function PetBrowser({pets, onAdoptPet}) {
   const petobjs = pets.map((pet) => {
-    return null;
+    return (<Pet key={pet.id} id={pet.id} onAdoptPet={onAdoptPet} pet={pet} />);
   });
 
   return (
-    <div className="ui cards">PET COMPONENT SHOULD GO HERE</div>
+    <div className="ui cards">{petobjs}</div>
   );
 }
 
