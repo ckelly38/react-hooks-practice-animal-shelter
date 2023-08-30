@@ -1,11 +1,16 @@
 import React from "react";
 
 function Filters({onFindPetsClick, onChangeType}) {
+  function onChangeHandler(event)
+  {
+    onChangeType(event.target.value);
+  }
+
   return (
     <div className="ui form">
       <h3>Animal type</h3>
       <div className="field">
-        <select onChange={onChangeType} name="type" id="type" aria-label="type">
+        <select onChange={onChangeHandler} name="type" id="type" aria-label="type">
           <option value="all">All</option>
           <option value="cat">Cats</option>
           <option value="dog">Dogs</option>

@@ -9,6 +9,8 @@ function App() {
 
   function onChangeType(nwtype)
   {
+    console.log("nwtype = " + nwtype);
+    console.log("before change filters = ", filters);
     const mynwfilters = {...filters};
     mynwfilters.type = nwtype;
     setFilters(mynwfilters);
@@ -18,6 +20,7 @@ function App() {
   {
     const baseurl = "http://localhost:3001/pets";
     let myqry = "";
+    console.log("filters = ", filters);
     if (filters.type === "all");
     else if (filters.type === "cat" || filters.type === "dog" || filters.type === "micropig")
     {
